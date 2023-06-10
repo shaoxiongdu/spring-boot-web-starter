@@ -1933,3 +1933,26 @@ Consider the following:
 2023-06-10 14:41:26.942 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
 2023-06-10 14:41:26.948 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/api'
 2023-06-10 14:41:26.953 [restartedMain] INFO  c.s.s.SpringBootWebStarterApplication - Started SpringBootWebStarterApplication in 1.344 seconds (process running for 1.653)
+2023-06-10 14:47:07.098 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-10 14:47:07.098 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-10 14:47:07.099 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-06-10 14:47:07.414 [http-nio-8080-exec-5] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 70 ms
+2023-06-10 15:12:41.286 [restartedMain] INFO  c.s.s.SpringBootWebStarterApplication - Starting SpringBootWebStarterApplication using Java 17.0.7 with PID 40958 (/home/x/IdeaProjects/spring-boot-web-starter/target/classes started by x in /home/x/IdeaProjects/spring-boot-web-starter)
+2023-06-10 15:12:41.288 [restartedMain] INFO  c.s.s.SpringBootWebStarterApplication - The following 1 profile is active: "HWCloud"
+2023-06-10 15:12:41.309 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-06-10 15:12:41.309 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-06-10 15:12:41.600 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-06-10 15:12:41.602 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-06-10 15:12:41.614 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2023-06-10 15:12:41.654 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[cn.shoxiongdu.springbootwebstarter.mapper]' package. Please check your configuration.
+2023-06-10 15:12:41.890 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-06-10 15:12:41.895 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-10 15:12:41.895 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-10 15:12:41.895 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-10 15:12:41.920 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2023-06-10 15:12:41.921 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 611 ms
+2023-06-10 15:12:41.924 [restartedMain] INFO  c.s.s.config.CorsConfig - cors config enable
+2023-06-10 15:12:42.446 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-06-10 15:12:42.456 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-06-10 15:12:42.463 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/api'
+2023-06-10 15:12:42.468 [restartedMain] INFO  c.s.s.SpringBootWebStarterApplication - Started SpringBootWebStarterApplication in 1.341 seconds (process running for 1.622)

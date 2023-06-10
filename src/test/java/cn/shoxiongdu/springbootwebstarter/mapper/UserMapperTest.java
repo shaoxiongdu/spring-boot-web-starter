@@ -10,7 +10,7 @@ public class UserMapperTest {
 
     @Test
     void test() {
-//
+
 //        userMapper.insert(new User());
 //
 //        userMapper.selectList(null).forEach(user -> {
@@ -18,5 +18,5 @@ public class UserMapperTest {
 //            user.update();
 //            userMapper.updateById(user);
 //        });
-    }
+//    }
 }

@@ -26,6 +26,6 @@ public final class RedisHelper {
     }
 
     public String getKeyPrefix() {
-        return Strings.isBlank(environment.getProperty("redis.key.prefix")) ? environment.getProperty("spring.application.name") : environment.getProperty("redis.key.prefix");
+        return Strings.isBlank(environment.getProperty("redis.key.prefix")) ? environment.getProperty("spring.application.name","") : environment.getProperty("redis.key.prefix");
     }
 }

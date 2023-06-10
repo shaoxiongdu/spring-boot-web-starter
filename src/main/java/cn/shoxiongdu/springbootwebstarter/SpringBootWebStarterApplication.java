@@ -9,7 +9,6 @@ import org.springframework.context.ApplicationContext;
 import java.util.Objects;
 
 @SpringBootApplication
-@MapperScan("cn.shoxiongdu.springbootwebstarter.mapper")
 public class SpringBootWebStarterApplication {
 
         private static final String SWAGGER_URI = "swagger-ui/index.html";
