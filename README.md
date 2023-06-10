@@ -57,9 +57,6 @@ This section explains how to quickly use this Starter.
 Make sure your project is a SpringBoot starter. And the version is greater than 3.0.0.
 ### Installation
 
-- If your project build tool is Maven
-- If your project build tool is Gradle
-
 ## Usage
 
 #### 1. Cross-domain configuration support

@@ -28,7 +28,6 @@ public class ResponseUtils {
     @SneakyThrows
     public static void writeFile(File file, HttpServletResponse response, String fileName) {
         writeFile(FileUtil.readBytes(file), response, fileName);
-        ResponseUtils.writeFil, response, fileName);
     }
 
 }
