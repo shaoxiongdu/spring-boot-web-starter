@@ -1,11 +1,20 @@
 CREATE DATABASE `spring_boot_web_starter`;
 
+CREATE TABLE base_entity
+(
+    id                BIGINT AUTO_INCREMENT COMMENT '用户ID',
+    create_time       DATETIME COMMENT '创建时间',
+    update_time       DATETIME COMMENT '更新时间',
+    deleted           INT   DEFAULT 0 COMMENT '删除标记',
+    PRIMARY KEY (id)
+) COMMENT ='用户表';
+
 CREATE TABLE user
 (
     id                BIGINT AUTO_INCREMENT COMMENT '用户ID',
     create_time       DATETIME COMMENT '创建时间',
     update_time       DATETIME COMMENT '更新时间',
-    deleted           TINYINT(1)   DEFAULT false COMMENT '删除标记',
+    deleted           INT   DEFAULT 0 COMMENT '删除标记',
     username          VARCHAR(255) COMMENT '用户名',
     password          VARCHAR(255) COMMENT '密码',
     email             VARCHAR(255) COMMENT '电子邮件',

@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:mysql://10.245.16.43:3306/spring_boot_web_starter
+    username: lixiang
+    password: lixiang
+    driver-class-name: com.mysql.cj.jdbc.Driver

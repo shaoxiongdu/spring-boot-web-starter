@@ -22,19 +22,13 @@ public class BaseEntity {
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
-    private LocalDateTime createTime = LocalDateTime.now();
+    @TableField(fill = FieldFill.INSERT)
+    private LocalDateTime createTime;
 
-    private LocalDateTime updateTime = LocalDateTime.now();
+    @TableField(fill = FieldFill.UPDATE)
+    private LocalDateTime updateTime;
 
-    @TableField(select = false)
-    private byte deleted = 0;
-
-    public void delete() {
-        this.deleted = 1;
-        update();
-    }
-
-    public void update() {
-        this.updateTime = LocalDateTime.now();
-    }
+    @TableLogic
+    @TableField
+    private Integer deleted = 0;
 }

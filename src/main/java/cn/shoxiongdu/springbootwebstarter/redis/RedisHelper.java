@@ -18,12 +18,12 @@ public final class RedisHelper {
     @Autowired
     private Environment environment;
 
-    private final Jedis jedis = RedisDS.create().getJedis();
+//    private final Jedis jedis = RedisDS.create().getJedis();
 
 
-    public Jedis getJedis() {
-        return jedis;
-    }
+//    public Jedis getJedis() {
+//        return jedis;
+//    }
 
     public String getKeyPrefix() {
         return Strings.isBlank(environment.getProperty("redis.key.prefix")) ? environment.getProperty("spring.application.name","") : environment.getProperty("redis.key.prefix");

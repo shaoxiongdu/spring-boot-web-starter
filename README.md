@@ -112,22 +112,7 @@ Common database fields are as follows
 | updateTime     | LocalDateTime  | Record updated time    | If it is an update operation, please call the update() method of this parent class. The current time will be automatically filled inside.                                      |
 | deleted        | byte           | Delete flag  0-not deleted 1-deleted | If it is a delete operation, please call the delete() method of this parent class. It will be automatically set to 1. At the same time, its updateTime will also be updated.      |
 
-Usage is as follows, assuming that class User inherits this parent class
-
-```java
-// Insert, which automatically fills createTime and updateTime with the current time, and sets deleted to 0
-userMapper.insert(new User());
-
-// Update, which automatically fills updateTime to the current time
-user.update();
-userMapper.updateById(user);
-
-// Delete, which automatically fills updateTime to the current time, and sets the delete flag to 1
-user.delete();
-userMapper.updateById(user);
-```
-
-
+After your entity class inherits the Base Entity, the relevant common fields automatically take effect.
 
 #### 4. Unified interface response
 

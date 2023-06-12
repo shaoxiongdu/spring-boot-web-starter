@@ -117,22 +117,7 @@ cn.shoxiongdu.springbootwebstarter.entity.base.BaseEntity.java
 | updateTime | LocalDateTime | 记录更新时间                 | 如果是更新操作，请调用该父类的update()方法即可。内部会自动填充当前时间。 |
 | deleted    | byte          | 删除标记  0-未删除  1-已删除 | 如果是删除操作，请调用该父类的delete()方法即可。内部会自动设置为1。同时更新其updateTime |
 
-用法如下，假设类User继承了该父类
-
-```java
-// 插入  会自动填充createTime、updateTime为当前时间，deleted为0
-userMapper.insert(new User());
-
-// 更新 会自动填充updateTime为当前时间
-user.update();
-userMapper.updateById(user);
-
-// 删除 会自动填充updateTime为当前时间，deleted标记为1
-user.delete();
-userMapper.updateById(user);
-```
-
-
+当您的实体类继承该BaseEntity之后，相关通用字段会自动生效。
 
 #### 4. 统一接口响应
 
