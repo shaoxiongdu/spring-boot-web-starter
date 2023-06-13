@@ -22,6 +22,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Throwable.class)
     @ResponseBody
     public Resp<String> handleThrowable(Throwable t) {
+        t.printStackTrace();
         return Resp.error(t);
     }
 }

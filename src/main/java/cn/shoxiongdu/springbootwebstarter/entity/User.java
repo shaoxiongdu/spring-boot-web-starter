@@ -1,11 +1,12 @@
 package cn.shoxiongdu.springbootwebstarter.entity;
 
+import cn.shoxiongdu.springbootwebstarter.config.JsonLocalDateTimeSerializer;
 import cn.shoxiongdu.springbootwebstarter.entity.base.BaseEntity;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
@@ -15,8 +16,12 @@ public class User extends BaseEntity {
     private String email = "";
     private String phone = "";
     private String nickName = "";
-    private LocalDateTime registrationDate = LocalDateTime.now();
-    private LocalDateTime lastLoginDate = LocalDateTime.now();
+
+    @JsonSerialize(using = JsonLocalDateTimeSerializer.class)
+    private LocalDateTime registrationDate = null;
+
+    @JsonSerialize(using = JsonLocalDateTimeSerializer.class)
+    private LocalDateTime lastLoginDate = null;
     private String lastLoginIp = "";
     private int userType = 0;
     private int status = 0;

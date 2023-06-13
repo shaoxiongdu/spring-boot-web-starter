@@ -2,12 +2,12 @@ package cn.shoxiongdu.springbootwebstarter.controller;
 
 import cn.dev33.satoken.stp.SaTokenInfo;
 import cn.dev33.satoken.stp.StpUtil;
-import cn.dev33.satoken.util.SaResult;
 import cn.shoxiongdu.springbootwebstarter.entity.User;
 import cn.shoxiongdu.springbootwebstarter.request.user.LoginRequest;
 import cn.shoxiongdu.springbootwebstarter.response.base.Resp;
 import cn.shoxiongdu.springbootwebstarter.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,8 +27,8 @@ public class UserController {
 
     @PostMapping("/login")
     @Operation(summary = "登陆")
-    public Resp<SaTokenInfo> login(@RequestBody LoginRequest request){
-        return userService.login(request);
+    public Resp<SaTokenInfo> login(@RequestBody LoginRequest requestBody, HttpServletRequest request) {
+        return userService.login(requestBody, request);
     }
 
     @Operation(summary = "检查登陆状态")
@@ -53,8 +53,13 @@ public class UserController {
     @GetMapping("/permissions")
     @Operation(summary = "权限列表")
     public Resp<List<String>> permissions() {
-        StpUtil.checkPermission("test");
         return Resp.success(StpUtil.getPermissionList());
+    }
+
+    @GetMapping("/info")
+    @Operation(summary = "用户信息")
+    public Resp<User> info() {
+        return Resp.success(userService.getById(StpUtil.getLoginId(0L)));
     }
 
 }

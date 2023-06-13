@@ -1,4 +1,4 @@
-CREATE DATABASE `spring_boot_web_starter`;
+# CREATE DATABASE `spring_boot_web_starter`;
 
 CREATE TABLE base_entity
 (
