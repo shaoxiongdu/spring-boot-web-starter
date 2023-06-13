@@ -4,3 +4,10 @@ spring:
     username: lixiang
     password: lixiang
     driver-class-name: com.mysql.cj.jdbc.Driver
+
+  data:
+    redis:
+      database: 1
+      host: 10.245.16.43
+      port: 6379
+      connect-timeout: 10s

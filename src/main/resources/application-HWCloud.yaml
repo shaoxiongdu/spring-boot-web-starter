@@ -4,3 +4,10 @@ spring:
     username: remoteuser
     password: password
     driver-class-name: com.mysql.cj.jdbc.Driver
+
+  data:
+    redis:
+      database: 1
+      host: 114.115.209.223
+      port: 6379
+      connect-timeout: 10s
