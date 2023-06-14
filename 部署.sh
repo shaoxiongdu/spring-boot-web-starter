@@ -12,5 +12,5 @@ ssh root@114.115.209.223 << EOF
 sudo fuser -k 80/tcp
 
 # 后台启动上传的 JAR 文件
-nohup java -jar /root/workspace/spring-boot-web-starter/spring-boot-web-starter-0.0.1-SNAPSHOT.jar > /dev/null 2>&1 &
+nohup java -jar /root/workspace/spring-boot-web-starter/spring-boot-web-starter-0.0.1-SNAPSHOT.jar --spring.profiles.active=HWCloud > /dev/null 2>&1 &
 EOF

@@ -29,6 +29,12 @@
             <version>${openApi.version}</version>
         </dependency>
 
+        <!-- Hibernate Validator 提供了 Bean Validation 的实现 -->
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+        </dependency>
+
         <!-- Sa-Token 权限认证，在线文档：https://sa-token.cc -->
         <dependency>
             <groupId>cn.dev33</groupId>

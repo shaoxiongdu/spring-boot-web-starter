@@ -4,11 +4,13 @@ import cn.dev33.satoken.annotation.SaCheckLogin;
 import cn.dev33.satoken.stp.SaTokenInfo;
 import cn.dev33.satoken.stp.StpUtil;
 import cn.shoxiongdu.springbootwebstarter.entity.User;
+import cn.shoxiongdu.springbootwebstarter.request.user.EnrollRequest;
 import cn.shoxiongdu.springbootwebstarter.request.user.LoginRequest;
 import cn.shoxiongdu.springbootwebstarter.response.base.Resp;
 import cn.shoxiongdu.springbootwebstarter.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,7 +26,7 @@ public class UserController {
     @GetMapping("/")
     @Operation(summary = "用户列表")
     @SaCheckLogin
-    public Resp<List<User>> getUserList(){
+    public Resp<List<User>> getUserList() {
         return Resp.success(userService.list());
     }
 
@@ -34,9 +36,16 @@ public class UserController {
         return userService.login(requestBody, request);
     }
 
+    @PostMapping("/enroll")
+    @Operation(summary = "注册")
+    public Resp<Boolean> enroll(@Valid @RequestBody EnrollRequest request) {
+        return userService.enroll(request);
+    }
+
+
     @Operation(summary = "检查登陆状态")
     @GetMapping("/login/isLogin")
-    public Resp<Boolean> isLogin(){
+    public Resp<Boolean> isLogin() {
         return Resp.success(StpUtil.isLogin());
     }
 
