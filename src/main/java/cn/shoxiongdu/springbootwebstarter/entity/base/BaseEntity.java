@@ -1,6 +1,6 @@
 package cn.shoxiongdu.springbootwebstarter.entity.base;
 
-import cn.shoxiongdu.springbootwebstarter.config.JsonLocalDateTimeSerializer;
+import cn.shoxiongdu.springbootwebstarter.config.JsonSerializerConfig;
 import com.baomidou.mybatisplus.annotation.*;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.Data;
@@ -24,11 +24,11 @@ public class BaseEntity {
     private Long id;
 
     @TableField(fill = FieldFill.INSERT)
-    @JsonSerialize(using = JsonLocalDateTimeSerializer.class)
+    @JsonSerialize(using = JsonSerializerConfig.class)
     private LocalDateTime createTime;
 
     @TableField(fill = FieldFill.UPDATE)
-    @JsonSerialize(using = JsonLocalDateTimeSerializer.class)
+    @JsonSerialize(using = JsonSerializerConfig.class)
     private LocalDateTime updateTime;
 
     @TableLogic
