@@ -43,13 +43,6 @@
             <version>${saToken.version}</version>
         </dependency>
 
-        <!-- Sa-Token-Quick-Login 插件依赖 -->
-        <dependency>
-            <groupId>cn.dev33</groupId>
-            <artifactId>sa-token-quick-login</artifactId>
-            <version>${saToken.version}</version>
-        </dependency>
-
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-pool2</artifactId>

@@ -7,7 +7,7 @@ spring:
     name: SpringBootWebStarter
 #
 server:
-  port: 8080
+  port: 80
   servlet:
     context-path: /api
 cors:
@@ -22,22 +22,3 @@ mybatis-plus:
 
 sa-token:
   token-name: Authorization
-
-# Sa-Token-Quick-Login 配置
-sa:
-  # 登录账号
-  name: shaoxiongdu
-  # 登录密码
-  pwd: dsx05117218
-  # 是否自动随机生成账号密码 (此项为true时, name与pwd失效)
-  auto: false
-  # 是否开启全局认证(关闭后将不再强行拦截)
-  auth: true
-  # 登录页标题
-  title: 管理员登录
-  # 是否显示底部版权信息
-  copr: false
-  # 指定拦截路径
-  # include: /**
-  # 指定排除路径
-  # exclude: /1.jpg

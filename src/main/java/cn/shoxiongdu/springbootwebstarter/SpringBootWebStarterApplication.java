@@ -1,6 +1,5 @@
 package cn.shoxiongdu.springbootwebstarter;
 
-import cn.dev33.satoken.quick.SaQuickManager;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -32,9 +31,6 @@ public class SpringBootWebStarterApplication {
 
             String swaggerURL = String.format("http://localhost:%d%s/%s", port, contextPath, SWAGGER_URI);
             System.out.printf("\n\t Local Server DEV: %s\n", swaggerURL);
-
-            System.out.println("name: " + SaQuickManager.getConfig().getName());
-            System.out.println("pwd:  " + SaQuickManager.getConfig().getPwd());
         }
 
 }
