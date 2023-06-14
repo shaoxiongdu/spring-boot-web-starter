@@ -1,5 +1,6 @@
 package cn.shoxiongdu.springbootwebstarter.controller;
 
+import cn.dev33.satoken.annotation.SaCheckLogin;
 import cn.dev33.satoken.stp.SaTokenInfo;
 import cn.dev33.satoken.stp.StpUtil;
 import cn.shoxiongdu.springbootwebstarter.entity.User;
@@ -21,6 +22,8 @@ public class UserController {
     UserService userService;
 
     @GetMapping("/")
+    @Operation(summary = "用户列表")
+    @SaCheckLogin
     public Resp<List<User>> getUserList(){
         return Resp.success(userService.list());
     }
@@ -51,12 +54,14 @@ public class UserController {
     }
 
     @GetMapping("/permissions")
+    @SaCheckLogin
     @Operation(summary = "权限列表")
     public Resp<List<String>> permissions() {
         return Resp.success(StpUtil.getPermissionList());
     }
 
     @GetMapping("/info")
+    @SaCheckLogin
     @Operation(summary = "用户信息")
     public Resp<User> info() {
         return Resp.success(userService.getById(StpUtil.getLoginId(0L)));
