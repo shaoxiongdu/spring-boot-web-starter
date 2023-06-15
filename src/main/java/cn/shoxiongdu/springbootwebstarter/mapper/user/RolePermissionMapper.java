@@ -1,6 +1,6 @@
-package cn.shoxiongdu.springbootwebstarter.mapper;
+package cn.shoxiongdu.springbootwebstarter.mapper.user;
 
-import cn.shoxiongdu.springbootwebstarter.entity.RolePermission;
+import cn.shoxiongdu.springbootwebstarter.entity.user.RolePermission;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 

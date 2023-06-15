@@ -2,8 +2,8 @@ package cn.shoxiongdu.springbootwebstarter.service.impl;
 
 import cn.dev33.satoken.stp.SaTokenInfo;
 import cn.dev33.satoken.stp.StpUtil;
-import cn.shoxiongdu.springbootwebstarter.entity.User;
-import cn.shoxiongdu.springbootwebstarter.mapper.UserMapper;
+import cn.shoxiongdu.springbootwebstarter.entity.user.User;
+import cn.shoxiongdu.springbootwebstarter.mapper.user.UserMapper;
 import cn.shoxiongdu.springbootwebstarter.request.user.EnrollRequest;
 import cn.shoxiongdu.springbootwebstarter.request.user.LoginRequest;
 import cn.shoxiongdu.springbootwebstarter.response.base.Resp;

@@ -3,7 +3,7 @@ package cn.shoxiongdu.springbootwebstarter.controller;
 import cn.dev33.satoken.annotation.SaCheckLogin;
 import cn.dev33.satoken.stp.SaTokenInfo;
 import cn.dev33.satoken.stp.StpUtil;
-import cn.shoxiongdu.springbootwebstarter.entity.User;
+import cn.shoxiongdu.springbootwebstarter.entity.user.User;
 import cn.shoxiongdu.springbootwebstarter.request.user.EnrollRequest;
 import cn.shoxiongdu.springbootwebstarter.request.user.LoginRequest;
 import cn.shoxiongdu.springbootwebstarter.response.base.Resp;

@@ -1,22 +1,20 @@
 package cn.shoxiongdu.springbootwebstarter.service.impl;
 
 import cn.dev33.satoken.stp.StpInterface;
-import cn.shoxiongdu.springbootwebstarter.entity.Permission;
-import cn.shoxiongdu.springbootwebstarter.entity.Role;
-import cn.shoxiongdu.springbootwebstarter.entity.RolePermission;
-import cn.shoxiongdu.springbootwebstarter.entity.UserRoles;
-import cn.shoxiongdu.springbootwebstarter.mapper.PermissionMapper;
-import cn.shoxiongdu.springbootwebstarter.mapper.RoleMapper;
-import cn.shoxiongdu.springbootwebstarter.mapper.RolePermissionMapper;
-import cn.shoxiongdu.springbootwebstarter.mapper.UserRolesMapper;
+import cn.shoxiongdu.springbootwebstarter.entity.user.Permission;
+import cn.shoxiongdu.springbootwebstarter.entity.user.Role;
+import cn.shoxiongdu.springbootwebstarter.entity.user.RolePermission;
+import cn.shoxiongdu.springbootwebstarter.entity.user.UserRoles;
+import cn.shoxiongdu.springbootwebstarter.mapper.user.PermissionMapper;
+import cn.shoxiongdu.springbootwebstarter.mapper.user.RoleMapper;
+import cn.shoxiongdu.springbootwebstarter.mapper.user.RolePermissionMapper;
+import cn.shoxiongdu.springbootwebstarter.mapper.user.UserRolesMapper;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * 自定义权限验证接口扩展

@@ -1,6 +1,7 @@
 package cn.shoxiongdu.springbootwebstarter.mapper;
 
-import cn.shoxiongdu.springbootwebstarter.entity.User;
+import cn.shoxiongdu.springbootwebstarter.entity.user.User;
+import cn.shoxiongdu.springbootwebstarter.mapper.user.UserMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -8,10 +9,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 public class UserMapperTest {
 
-    @Autowired UserMapper userMapper;
+    @Autowired
+    UserMapper userMapper;
 
     @Test
-    void test(){
+    void test() {
 
 //        userMapper.insert(makeUser());
 

@@ -1,4 +1,4 @@
-package cn.shoxiongdu.springbootwebstarter.entity;
+package cn.shoxiongdu.springbootwebstarter.entity.user;
 
 import cn.shoxiongdu.springbootwebstarter.entity.base.BaseEntity;
 import lombok.Data;

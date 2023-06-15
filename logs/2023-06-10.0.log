@@ -789,8 +789,8 @@ Caused by: java.lang.ClassNotFoundException: com.baomidou.mybatisplus.generator.
 2023-06-10 13:38:15.421 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
 2023-06-10 13:38:15.421 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 73 ms
 2023-06-10 13:38:15.524 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2023-06-10 13:38:15.525 [restartedMain] ERROR o.m.spring.mapper.MapperFactoryBean - Error while adding the mapper 'interface cn.shoxiongdu.springbootwebstarter.mapper.UserMapper' to configuration.
-java.lang.TypeNotPresentException: Type cn.shoxiongdu.springbootwebstarter.entity.User not present
+2023-06-10 13:38:15.525 [restartedMain] ERROR o.m.spring.mapper.MapperFactoryBean - Error while adding the mapper 'interface cn.shoxiongdu.springbootwebstarter.mapper.user.UserMapper' to configuration.
+java.lang.TypeNotPresentException: Type cn.shoxiongdu.springbootwebstarter.entity.user.User not present
 	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117)
 	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125)
 	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
@@ -836,7 +836,7 @@ java.lang.TypeNotPresentException: Type cn.shoxiongdu.springbootwebstarter.entit
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: java.lang.ClassNotFoundException: cn.shoxiongdu.springbootwebstarter.entity.User
+Caused by: java.lang.ClassNotFoundException: cn.shoxiongdu.springbootwebstarter.entity.user.User
 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
@@ -848,13 +848,13 @@ Caused by: java.lang.ClassNotFoundException: cn.shoxiongdu.springbootwebstarter.
 	at java.base/java.lang.Class.forName(Class.java:467)
 	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
 	... 44 common frames omitted
-2023-06-10 13:38:15.526 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userMapper' defined in file [/home/x/IdeaProjects/spring-boot-web-starter/target/classes/cn/shoxiongdu/springbootwebstarter/mapper/UserMapper.class]: java.lang.TypeNotPresentException: Type cn.shoxiongdu.springbootwebstarter.entity.User not present
+2023-06-10 13:38:15.526 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userMapper' defined in file [/home/x/IdeaProjects/spring-boot-web-starter/target/classes/cn/shoxiongdu/springbootwebstarter/mapper/UserMapper.class]: java.lang.TypeNotPresentException: Type cn.shoxiongdu.springbootwebstarter.entity.user.User not present
 2023-06-10 13:38:15.527 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
 2023-06-10 13:38:15.530 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
 2023-06-10 13:38:15.531 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userMapper' defined in file [/home/x/IdeaProjects/spring-boot-web-starter/target/classes/cn/shoxiongdu/springbootwebstarter/mapper/UserMapper.class]: java.lang.TypeNotPresentException: Type cn.shoxiongdu.springbootwebstarter.entity.User not present
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userMapper' defined in file [/home/x/IdeaProjects/spring-boot-web-starter/target/classes/cn/shoxiongdu/springbootwebstarter/mapper/UserMapper.class]: java.lang.TypeNotPresentException: Type cn.shoxiongdu.springbootwebstarter.entity.user.User not present
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
@@ -877,13 +877,13 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: java.lang.IllegalArgumentException: java.lang.TypeNotPresentException: Type cn.shoxiongdu.springbootwebstarter.entity.User not present
+Caused by: java.lang.IllegalArgumentException: java.lang.TypeNotPresentException: Type cn.shoxiongdu.springbootwebstarter.entity.user.User not present
 	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:83)
 	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
 	... 21 common frames omitted
-Caused by: java.lang.TypeNotPresentException: Type cn.shoxiongdu.springbootwebstarter.entity.User not present
+Caused by: java.lang.TypeNotPresentException: Type cn.shoxiongdu.springbootwebstarter.entity.user.User not present
 	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117)
 	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125)
 	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
@@ -906,7 +906,7 @@ Caused by: java.lang.TypeNotPresentException: Type cn.shoxiongdu.springbootwebst
 	at com.baomidou.mybatisplus.core.MybatisConfiguration.addMapper(MybatisConfiguration.java:129)
 	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:80)
 	... 24 common frames omitted
-Caused by: java.lang.ClassNotFoundException: cn.shoxiongdu.springbootwebstarter.entity.User
+Caused by: java.lang.ClassNotFoundException: cn.shoxiongdu.springbootwebstarter.entity.user.User
 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
